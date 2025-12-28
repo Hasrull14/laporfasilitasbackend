@@ -17,6 +17,11 @@ app.use(cors());
 const PORT = process.env.PORT
 const MONGO_URL = process.env.MONGO_URL
 
+
+app.get("/", (req, res) => {
+  res.send("API Lapor Fasilitas is running 🚀");
+});
+
 //routes auth
 app.use("/api/auth", routeAuth)
 //routes report
