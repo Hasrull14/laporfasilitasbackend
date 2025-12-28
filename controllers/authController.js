@@ -6,6 +6,14 @@ const jwt = require("jsonwebtoken");
 exports.register = async (req, res) => {
     console.log(req.body)
   const { name, email, password,role } = req.body;
+
+  // 3️⃣ Cek email duplikat
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(409).json({
+        message: "Email sudah terdaftar",
+      });
+    }
  
   const hashed = await bcrypt.hash(password, 10);
 
