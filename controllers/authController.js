@@ -7,7 +7,7 @@ exports.register = async (req, res) => {
     console.log(req.body)
   const { name, email, password,role } = req.body;
 
-  // 3️⃣ Cek email duplikat
+  // Cek email duplikat
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(409).json({
