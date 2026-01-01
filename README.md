@@ -86,9 +86,9 @@ status code: 201 created
 
 ## 🛠️ Laporan – Admin
 Method	Endpoint	Fungsi  
-GET	/reports	Lihat semua laporan  
-GET	/reports/report/{id}	Detail laporan  
-PUT	/reports/status/{id}	Update status laporan  
+**- GET	/reports	Lihat semua laporan**  
+**- GET	/reports/report/{id}	Detail laporan**  
+**- PUT	/reports/status/{id}	Update status laporan**  
 Request update status:  
 {  
     "status": "diproses"  
@@ -106,9 +106,9 @@ Response update status:
     "__v": 0  
 }  
 status code: 200 OK  
-DELETE	/reports/{id}	Hapus laporan  
+**- DELETE	/reports/{id}	Hapus laporan**  
 
 ## 👤 Endpoint Umum
 Method	Endpoint	Fungsi  
-GET	/reports/profile	Data user/admin login  
-GET	/reports/categories	Daftar kategori laporan  
+**- GET	/reports/profile	Data user/admin login**  
+**- GET	/reports/categories	Daftar kategori laporan**  
