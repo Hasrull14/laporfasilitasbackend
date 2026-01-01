@@ -28,26 +28,27 @@ Admin → kelola semua laporan
 User → buat & lihat laporan sendiri  
 
 ## 🔑 Auth Endpoint
-- Register  
-**POST /auth/registrasi**  
+**Register**  
+**- POST /auth/registrasi**  
 Request register:  
 {  
-    "name": "dimas",  
-    "email": "dimas@gmail.com",  
+    "name": "admin",  
+    "email": "admin@gmail.com",  
     "password": "admin123",  
     "role": "admin"  
 }  
+
 Response register:  
 {  
     "message": "User registered"  
 }  
 status code: 201 created  
 
-- Login  
-**POST /auth/login**  
+**Login**  
+**- POST /auth/login**  
 Request login:  
 {  
-    "email": "dimas@gmail.com",  
+    "email": "admin@gmail.com",  
     "password": "admin123"  
 }  
 Response login:  
@@ -106,6 +107,7 @@ Response update status:
     "__v": 0  
 }  
 status code: 200 OK  
+
 **- DELETE	/reports/{id}	Hapus laporan**  
 
 ## 👤 Endpoint Umum
