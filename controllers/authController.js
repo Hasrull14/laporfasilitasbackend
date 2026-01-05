@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 // REGISTER
 exports.register = async (req, res) => {
     console.log(req.body)
-  const { name, email, password, role } = req.body;
+  const { name, email, password } = req.body;
 
   // Cek email duplikat
     const existingUser = await User.findOne({ email });
@@ -17,14 +17,11 @@ exports.register = async (req, res) => {
  
   const hashed = await bcrypt.hash(password, 10);
 
-  if(role != "user"){
-    res.status(403).json({ message: "You don't have permission to access" });
-  }
   const user = await User.create({
     name,
     email,
     password: hashed,
-    role
+    role: "user"
   });
 
   res.status(201).json({ message: "User registered" });
