@@ -18,6 +18,6 @@ router.delete("/:id", auth, isAdmin, controller.deleteReport);
 router.get("/profile", auth, controller.profile);
 
 // GET enum category
-router.get("/categories", controller.categoryReport);
+router.get("/categories", auth, controller.categoryReport);
 
 module.exports = router;
