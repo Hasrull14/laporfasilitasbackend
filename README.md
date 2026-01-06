@@ -28,14 +28,18 @@ Admin → kelola semua laporan
 User → buat & lihat laporan sendiri  
 
 ## 🔑 Auth Endpoint
+untuk admin hanya bisa login sedangkan user bisa registrasi dan login  
+**data login admin  **
+email: admin@gmail.com  
+password:  admin123  
+
 **Register**  
 **- POST /auth/registrasi**  
 Request register:  
 {  
-    "name": "admin",  
-    "email": "admin@gmail.com",  
-    "password": "admin123",  
-    "role": "admin"  
+    "name": "user",  
+    "email": "user@gmail.com",  
+    "password": "user123"  
 }  
 
 Response register:  
@@ -48,8 +52,8 @@ status code: 201 created
 **- POST /auth/login**  
 Request login:  
 {  
-    "email": "admin@gmail.com",  
-    "password": "admin123"  
+    "email": "user@gmail.com",  
+    "password": "user123"  
 }  
 Response login:  
 {  
