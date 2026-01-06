@@ -29,7 +29,7 @@ User → buat & lihat laporan sendiri
 
 ## 🔑 Auth Endpoint
 untuk admin hanya bisa login sedangkan user bisa registrasi dan login  
-**data login admin  **
+**data login admin**  
 email: admin@gmail.com  
 password:  admin123  
 
